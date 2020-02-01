@@ -1,0 +1,37 @@
+#pragma once
+
+// Name: Robogore, Version: 1.1.176
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+// Classes
+//---------------------------------------------------------------------------
+
+// Class FacialAnimation.AudioCurveSourceComponent
+// 0x0040 (0x07C0 - 0x0780)
+class UAudioCurveSourceComponent : public UAudioComponent
+{
+public:
+	struct FName                                       CurveSourceBindingName;                                   // 0x0780(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CurveSyncOffset;                                          // 0x0788(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x078C(0x0034) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FacialAnimation.AudioCurveSourceComponent");
+		return ptr;
+	}
+
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
